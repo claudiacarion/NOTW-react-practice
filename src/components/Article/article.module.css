@@ -1,0 +1,16 @@
+.article {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 100%;
+}
+
+.articleCategory {
+  margin-top: auto;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.image {
+  width: 100%;
+}

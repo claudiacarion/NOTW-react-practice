@@ -1,0 +1,23 @@
+.breaking {
+  border: 1px solid #000;
+  display: flex;
+  margin: 16px 32px;
+}
+
+.breakingTitle {
+  background-color: #000;
+  color: #fff;
+  flex-shrink: 0;
+  padding: 4px 32px;
+}
+
+.breakingArticles {
+  display: flex;
+  flex: 1;
+  justify-content: space-evenly;
+  padding: 4px 32px;
+}
+
+.arrow {
+    padding: 4px 32px;
+}

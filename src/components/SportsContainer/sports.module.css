@@ -1,0 +1,11 @@
+.sportsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0 8px;
+}
+
+.sportsContainer > * {
+  border-bottom: 1px solid #000;
+  padding-bottom: 16px;
+}

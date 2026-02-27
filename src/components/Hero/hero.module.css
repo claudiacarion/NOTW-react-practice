@@ -1,0 +1,8 @@
+.hero {
+  border-bottom: 2px solid #000;
+  display: grid;
+  gap: 8px;
+  grid-template-columns: 1fr 2fr 1fr;
+  margin: 32px;
+  padding-bottom: 32px;
+}

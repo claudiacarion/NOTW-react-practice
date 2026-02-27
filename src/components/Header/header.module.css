@@ -1,0 +1,12 @@
+.header {
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  margin: 24px;
+  text-align: center;
+}
+
+.headerTitle {
+  font-family: "UnifrakturMaguntia", cursive;
+  font-size: 2rem;
+}

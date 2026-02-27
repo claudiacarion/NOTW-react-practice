@@ -1,0 +1,24 @@
+.categoryContainer {
+  margin: 32px;
+}
+
+.categoryTitle {
+  padding-bottom: 16px;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+.categoryWrapper {
+  display: flex;
+  gap: 16px;
+}
+
+.categoryCard {
+  display: flex;
+  gap: 32px;
+}
+
+.categoryArticles {
+  display: flex;
+  gap: 16px;
+}

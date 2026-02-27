@@ -1,0 +1,20 @@
+.subscribeTitle {
+  margin-bottom: 16px;
+}
+
+.input, .button {
+  margin: 8px 0;
+  padding: 4px;
+  width: 100%;
+}
+
+.input {
+  border: none;
+}
+
+.button {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  text-transform: uppercase;
+}

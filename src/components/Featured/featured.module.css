@@ -1,0 +1,9 @@
+.featured {
+  border: 1px solid #000;
+  display: flex;
+  padding: 16px
+}
+
+.featured h2 {
+  font-size: 2rem;
+}
