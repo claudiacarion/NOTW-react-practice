@@ -1,4 +1,5 @@
 .breaking {
+  align-items: center;
   border: 1px solid #000;
   display: flex;
   margin: 16px 32px;
@@ -8,7 +9,7 @@
   background-color: #000;
   color: #fff;
   flex-shrink: 0;
-  padding: 4px 32px;
+  padding: 8px 32px;
 }
 
 .breakingArticles {
