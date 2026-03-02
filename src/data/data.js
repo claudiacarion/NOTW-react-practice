@@ -206,11 +206,10 @@ const removeArticle = (arr, articleToRemove) => arr.filter(article => article.he
 const removeMultiple = (arr, articlesToRemove) => arr.filter(article => !articlesToRemove.some(a => a.headline === article.headline))
 
 //filtering and displaying: featured
-const nonSportArticles = articles.filter(article => article.category !== "sport");
-export const displayFeatured = pickRandom(nonSportArticles);
+export const displayFeatured = pickRandom(articles);
 
 //recent
-const remaining = nonSportArticles.filter(article => article.headline !== displayFeatured.headline);
+const remaining = articles.filter(article => article.headline !== displayFeatured.headline);
 
 const swedenArticles = remaining.filter(article => article.category === "sweden");
 const worldArticles = remaining.filter(article => article.category === "world");
@@ -224,7 +223,7 @@ const recentEntertainment = pickRandom(entertainmentArticles);
 export const displayRecent = [recentWorld, recentSweden, recentEntertainment, recentCrime];
 
 //sport
-const sportArticles = articles.filter(article => article.category === "sport");
+const sportArticles = articles.filter(article => article.category === "sport" && article.headline !== displayFeatured.headline);
 export const displaySport = pickMultiple(sportArticles, 2);
 
 //category
