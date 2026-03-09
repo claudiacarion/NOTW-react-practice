@@ -1,15 +1,14 @@
 import styles from "./nav-menu.module.css";
 
-const NavMenu = () => {
+const NavMenu = ({ updateFunction, updateArticleFunction, currentCategory }) => {
+  const categories = ["Home", "World", "Sweden", "Sport", "Entertainment", "Crime"];
+
   return (
     <div className={styles.navMenu}>
       <i className={`fa-solid fa-bars ${styles.hamburger}`}></i>
-      <p className={styles.menuItem}>Home</p>
-      <p className={styles.menuItem}>World</p>
-      <p className={styles.menuItem}>Sweden</p>
-      <p className={styles.menuItem}>Sport</p>
-      <p className={styles.menuItem}>Entertainment</p>
-      <p className={styles.menuItem}>Crime</p>
+      {categories.map((category, index) => (
+        <p className={styles.menuItem} key={index} onClick={() => (updateFunction(category), updateArticleFunction(currentCategory))}>{category}</p>
+      ))}
     </div>
   );
 };

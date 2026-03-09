@@ -1,11 +1,11 @@
 import styles from "./article.module.css";
 import { getImageUrl } from "../../utils/functions";
 
-const Article = ({ headline, deck, category, image }) => {
+const Article = ({ headline, deck, category, image, updateArticle, article }) => {
   return (
-    <article className={styles.article}>
+    <article className={styles.article} onClick={() => updateArticle({article})}>
       {image ? (
-        <div className={`${styles.imageContainer} animate__animated animate__fadeIn`}>
+        <div className={styles.imageContainer}>
           <img className={styles.image} src={getImageUrl(image)} />
         </div>
       ) : (

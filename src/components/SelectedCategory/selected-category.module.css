@@ -1,0 +1,13 @@
+.selectedCategory {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.articleWrapper {
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.image {
+  width: 100%;
+}

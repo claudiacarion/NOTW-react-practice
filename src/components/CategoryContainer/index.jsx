@@ -2,7 +2,7 @@ import styles from "./category-container.module.css";
 import Article from "../Article";
 import { categoryArticles } from "../../data/data";
 
-const CategoryContainer = () => {
+const CategoryContainer = ({updateArticle}) => {
   return (
     <>
       {categoryArticles.map((category, index) => (
@@ -13,7 +13,10 @@ const CategoryContainer = () => {
               <Article key={index}
                 image={article.image}
                 headline={article.headline}
-                deck={article.deck} />
+                deck={article.deck} 
+                updateArticle={updateArticle} 
+                article={article}
+                />
             ))}
           </div>
         </div>

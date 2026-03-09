@@ -1,11 +1,11 @@
 import Header from '../Header'
 import Navbar from "../NavBar"
 
-const HeaderContainer = () => {
+const HeaderContainer = ({updateCategory, updateArticle }) => {
   return (
     <>
     <Header />
-    <Navbar />
+    <Navbar updateCategory={updateCategory} updateArticle={updateArticle}/>
     </>
   )
 }

@@ -248,4 +248,5 @@ const usedArticles = [
   ...displaySport,
   ...categoryArticles.flatMap(category => category.articles),
 ];
+
 export const breaking = articles.filter(article => !usedArticles.includes(article));
