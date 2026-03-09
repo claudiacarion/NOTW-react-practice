@@ -7,7 +7,6 @@ const Featured = () => {
     <div className={styles.featured}>
       <Article
         {...displayFeatured}
-        titleClass={`large`}
       />
     </div>
   );
