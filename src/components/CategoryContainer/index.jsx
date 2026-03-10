@@ -2,10 +2,12 @@ import styles from "./category-container.module.css";
 import Article from "../Article";
 import { categoryArticles } from "../../data/data";
 
-const CategoryContainer = ({updateArticle}) => {
+const CategoryContainer = ({updateArticle, currentCategory}) => {
+  const displayArticles = categoryArticles.filter(article => article.category !== currentCategory)
+
   return (
     <>
-      {categoryArticles.map((category, index) => (
+      {displayArticles.map((category, index) => (
         <div className={styles.categoryContainer} key={index}>
           <h2 className={styles.categoryTitle}>{category.category}</h2>
           <div className={styles.categoryCard}>
