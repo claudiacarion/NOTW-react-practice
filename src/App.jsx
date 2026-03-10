@@ -20,11 +20,20 @@ function App() {
         <>
           <Breaking updateArticle={setSelectedArticle} />
           {category === "Home" && <Hero updateArticle={setSelectedArticle} article={selectedArticle} />}
-          {category && <SelectedCategory currentCategory={category} updateArticle={setSelectedArticle} article={selectedArticle} />}
-          <CategoryContainer updateArticle={setSelectedArticle} article={selectedArticle} currentCategory={category}/>
+          {category && (
+            <SelectedCategory currentCategory={category} updateArticle={setSelectedArticle} article={selectedArticle} />
+          )}
+          <CategoryContainer updateArticle={setSelectedArticle} article={selectedArticle} currentCategory={category} />
         </>
       )}
-      {selectedArticle && <SelectedArticle currentArticle={selectedArticle} updateArticle={setSelectedArticle} currentCategory={category} updateCategory={setCategory} />}
+      {selectedArticle && (
+        <SelectedArticle
+          currentArticle={selectedArticle}
+          updateArticle={setSelectedArticle}
+          currentCategory={category}
+          updateCategory={setCategory}
+        />
+      )}
       <Footer />
     </>
   );
