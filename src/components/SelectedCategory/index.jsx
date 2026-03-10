@@ -7,7 +7,7 @@ const SelectedCategory = ({ currentCategory, updateArticle }) => {
 
   return (
     <>
-      <h2 className={styles.categoryTitle}>{currentCategory}</h2>
+      {currentCategory !== "Home" && <h2 className={styles.categoryTitle}>{currentCategory}</h2>}
       <div className={styles.selectedCategory}>
         {selected.map((article, index) => (
           <div className={styles.articleWrapper} key={index} onClick={() => updateArticle({ article })}>
