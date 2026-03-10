@@ -1,11 +1,17 @@
+.categoryTitle {
+  font-size: 2rem;
+  text-align: center;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
 .selectedCategory {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
 }
 
 .articleWrapper {
-  margin: 1rem;
-  padding: 1rem;
+  margin: 32px;
 }
 
 .image {
