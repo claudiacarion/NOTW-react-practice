@@ -18,8 +18,13 @@ function App() {
       <HeaderContainer updateCategory={setCategory} updateArticle={setSelectedArticle} currentCategory={category} />
       {!selectedArticle && (
         <>
-          <Breaking updateArticle={setSelectedArticle} />
-          {category === "Home" && <Hero updateArticle={setSelectedArticle} article={selectedArticle} />}
+          {category === "Home" && (
+            <>
+              <Breaking updateArticle={setSelectedArticle} />
+              <Hero updateArticle={setSelectedArticle} article={selectedArticle} />
+            </>
+          )}
+
           {category && (
             <SelectedCategory currentCategory={category} updateArticle={setSelectedArticle} article={selectedArticle} />
           )}
