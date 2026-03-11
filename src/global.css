@@ -24,9 +24,3 @@ h6,
 p {
   margin: 0;
 }
-
-@media screen and (min-width: 768px) {
-  .fa-solid {
-    display: none;
-  }
-}

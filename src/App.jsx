@@ -32,7 +32,6 @@ function App() {
                 updateArticle={setSelectedArticle}
                 setIsOpen={setIsOpen}
                 category={category}
-                updateCategory={setCategory}
               />
               <Hero updateArticle={setSelectedArticle} article={selectedArticle} setIsOpen={setIsOpen} />
             </>

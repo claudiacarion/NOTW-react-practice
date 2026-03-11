@@ -7,7 +7,7 @@ const NavMenu = ({ updateFunction, updateArticleFunction, currentCategory, setIs
 
   return (
     <div className={styles.navMenu}>
-      <i className="fa-solid fa-bars" onClick={() => toggleMenu()}></i>
+      <i className={`${styles.hamburger} fa-solid fa-bars`} onClick={() => toggleMenu()}></i>
       <div className={`${styles.menuWrapper} ${isOpen ? `${styles.open}` : ""}`}>
         {categories.map((category, index) => (
           <p

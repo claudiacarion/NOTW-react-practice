@@ -1,7 +1,7 @@
 import { breaking } from "../../data/data";
 import styles from "./breaking.module.css";
 
-const Breaking = ({ updateArticle, setIsOpen, updateCategory }) => {
+const Breaking = ({ updateArticle, setIsOpen }) => {
   return (
     <div className={styles.breaking}>
       <h4 className={styles.breakingTitle}>Breaking News</h4>
@@ -12,7 +12,6 @@ const Breaking = ({ updateArticle, setIsOpen, updateCategory }) => {
           onClick={() => {
             updateArticle({ article });
             setIsOpen(false);
-            updateCategory(article.category);
           }}>
           <p className={styles.breakingHeadline}>{article.headline}</p>
           <span className={styles.arrow}>&#8594;</span>
