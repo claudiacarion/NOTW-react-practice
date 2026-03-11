@@ -14,7 +14,6 @@ function App() {
   const [selectedArticle, setSelectedArticle] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
 
-  console.log("APP: " + category);
   return (
     <>
       <HeaderContainer
