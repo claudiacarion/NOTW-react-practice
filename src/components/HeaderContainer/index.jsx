@@ -4,7 +4,7 @@ import Navbar from "../NavBar"
 const HeaderContainer = ({updateCategory, updateArticle }) => {
   return (
     <>
-    <Header />
+    <Header updateCategory={updateCategory} />
     <Navbar updateCategory={updateCategory} updateArticle={updateArticle}/>
     </>
   )

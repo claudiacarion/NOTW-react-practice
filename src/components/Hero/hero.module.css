@@ -1,11 +1,12 @@
 .hero {
-  border-bottom: 2px solid #000;
+  border: none;
   margin: 32px;
   padding-bottom: 32px;
 }
 
 @media screen and (min-width: 768px) {
   .hero {
+    border-bottom: 2px solid #000;
     display: grid;
     gap: 8px;
     grid-template-columns: 1fr 2fr 1fr;

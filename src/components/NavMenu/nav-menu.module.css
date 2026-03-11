@@ -1,6 +1,21 @@
-/* .menuWrapper {
+.menuWrapper {
+  display: none;
+}
+
+.open {
+  background-color: #000;
   display: flex;
-} */
+  flex-direction: column;
+  left: 0;
+  padding: 16px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+.menuItem {
+  padding: 8px;
+}
 
 @media screen and (min-width: 768px) {
   .navMenu {
@@ -13,5 +28,9 @@
     display: flex;
     flex-grow: 1;
     justify-content: space-evenly;
+  }
+
+  .menuItem:hover {
+    cursor: pointer;
   }
 }

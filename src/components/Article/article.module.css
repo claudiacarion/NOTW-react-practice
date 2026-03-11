@@ -14,3 +14,7 @@
 .image {
   width: 100%;
 }
+
+.article:hover {
+  cursor: pointer;
+}

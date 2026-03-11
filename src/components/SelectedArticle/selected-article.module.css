@@ -1,19 +1,24 @@
 .currentArticle {
   margin: 0 auto;
-  padding: 1rem;
-  max-width: 80%;
-}
-
-.imageContainer {
-  width: 300px;
+  padding: 32px;
 }
 
 .image {
   width: 100%;
 }
 
-.backBtn{
+.backBtn {
   padding: 1rem 2rem;
   text-align: right;
   width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .currentArticle {
+    max-width: 60%;
+  }
+
+  .backBtn:hover {
+    cursor: pointer;
+  }
 }

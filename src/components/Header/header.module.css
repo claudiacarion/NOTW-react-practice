@@ -19,4 +19,8 @@
   .headerTitle {
     margin-top: 0px;
   }
+
+  .headerTitle:hover {
+    cursor: pointer;
+  }
 }
