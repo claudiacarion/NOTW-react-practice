@@ -1,10 +1,10 @@
 import Header from "../Header";
 import Navbar from "../NavBar";
 
-const HeaderContainer = ({ updateCategory, updateArticle, setIsOpen, isOpen }) => {
+const HeaderContainer = ({ updateCategory, updateArticle, setIsOpen, isOpen, currentCategory }) => {
   return (
     <>
-      <Header updateCategory={updateCategory} />
+      <Header updateCategory={updateCategory} setIsOpen={setIsOpen} currentCategory={currentCategory}/>
       <Navbar updateCategory={updateCategory} updateArticle={updateArticle} setIsOpen={setIsOpen} isOpen={isOpen} />
     </>
   );

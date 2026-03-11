@@ -14,9 +14,9 @@ const NavMenu = ({ updateFunction, updateArticleFunction, currentCategory, setIs
             className={styles.menuItem}
             key={index}
             onClick={() => {
-              updateFunction(category);
+              updateFunction(category.toLowerCase());
               updateArticleFunction(currentCategory);
-              setIsOpen(false)
+              setIsOpen(false);
             }}>
             {category}
           </p>

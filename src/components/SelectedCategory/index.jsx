@@ -2,15 +2,21 @@ import styles from "./selected-category.module.css";
 import { articles } from "../../data/data";
 import { getImageUrl } from "../../utils/functions";
 
-const SelectedCategory = ({ currentCategory, updateArticle }) => {
+const SelectedCategory = ({ currentCategory, updateArticle, setIsOpen }) => {
   const selected = articles.filter(article => article.category === currentCategory.toLowerCase());
 
   return (
     <>
-      {currentCategory !== "Home" && <h2 className={styles.categoryTitle}>{currentCategory}</h2>}
+      {currentCategory !== "home" && <h2 className={styles.categoryTitle}>{currentCategory}</h2>}
       <div className={styles.selectedCategory}>
         {selected.map((article, index) => (
-          <div className={styles.articleWrapper} key={index} onClick={() => updateArticle({ article })}>
+          <div
+            className={styles.articleWrapper}
+            key={index}
+            onClick={() => {
+              setIsOpen(false);
+              updateArticle({ article });
+            }}>
             <div className={styles.imageContainer}>
               <img className={styles.image} src={getImageUrl(article.image)} />
             </div>
