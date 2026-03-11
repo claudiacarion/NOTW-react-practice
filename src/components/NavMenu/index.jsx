@@ -1,10 +1,8 @@
-import { useState } from "react";
 import styles from "./nav-menu.module.css";
 
-const NavMenu = ({ updateFunction, updateArticleFunction, currentCategory }) => {
+const NavMenu = ({ updateFunction, updateArticleFunction, currentCategory, setIsOpen, isOpen }) => {
   const categories = ["Home", "World", "Sweden", "Sport", "Entertainment", "Crime"];
 
-  const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => setIsOpen(isOpen => !isOpen);
 
   return (

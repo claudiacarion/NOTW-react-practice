@@ -12,21 +12,37 @@ import SelectedArticle from "./components/SelectedArticle";
 function App() {
   const [category, setCategory] = useState("Home");
   const [selectedArticle, setSelectedArticle] = useState(null);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
-      <HeaderContainer updateCategory={setCategory} updateArticle={setSelectedArticle} currentCategory={category} />
+      <HeaderContainer
+        updateCategory={setCategory}
+        updateArticle={setSelectedArticle}
+        currentCategory={category}
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
+      />
       {!selectedArticle && (
         <>
           {category === "Home" && (
             <>
-              <Breaking updateArticle={setSelectedArticle} />
-              <Hero updateArticle={setSelectedArticle} article={selectedArticle} />
+              <Breaking updateArticle={setSelectedArticle} setIsOpen={setIsOpen} />
+              <Hero
+                updateArticle={setSelectedArticle}
+                article={selectedArticle}
+                setIsOpen={setIsOpen}
+              />
             </>
           )}
 
           {category && (
-            <SelectedCategory currentCategory={category} updateArticle={setSelectedArticle} article={selectedArticle} />
+            <SelectedCategory
+              currentCategory={category}
+              updateArticle={setSelectedArticle}
+              article={selectedArticle}
+              setIsOpen={setIsOpen}
+            />
           )}
           {window.innerWidth >= 768 && (
             <CategoryContainer
@@ -43,6 +59,7 @@ function App() {
           updateArticle={setSelectedArticle}
           currentCategory={category}
           updateCategory={setCategory}
+          setIsOpen={setIsOpen}
         />
       )}
       <Footer />

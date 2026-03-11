@@ -3,12 +3,12 @@ import RecentContainer from '../RecentContainer'
 import Featured from "../Featured"
 import SportsContainer from '../SportsContainer'
 
-const Hero = ({updateArticle, article}) => {  
+const Hero = ({updateArticle, article, setIsOpen}) => {  
   return (
     <div className={styles.hero}>
-      <RecentContainer updateArticleFunction={updateArticle} currentArticle={article} />
-      <Featured updateArticleFunction={updateArticle} currentArticle={article} />
-      <SportsContainer updateArticleFunction={updateArticle} currentArticle={article} />
+      <RecentContainer updateArticleFunction={updateArticle} currentArticle={article} setIsOpen={setIsOpen}/>
+      <Featured updateArticleFunction={updateArticle} currentArticle={article} setIsOpen={setIsOpen}/>
+      <SportsContainer updateArticleFunction={updateArticle} currentArticle={article} setIsOpen={setIsOpen}/>
     </div>
   )
 }
