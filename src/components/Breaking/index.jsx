@@ -8,9 +8,7 @@ const Breaking = ({ updateArticle }) => {
       {breaking.map((article, index) => (
         <div key={index} className={styles.breakingArticles} onClick={() => updateArticle({article})}>
           <p className={styles.breakingHeadline}>{article.headline}</p>
-          <i
-            className={`fa-solid fa-arrow-right ${styles.arrow}`}
-            style={{ display: index === breaking.length - 1 ? "none" : "block" }}></i>
+         <span className={styles.arrow}>&#8594;</span>
         </div>
       ))}
     </div>

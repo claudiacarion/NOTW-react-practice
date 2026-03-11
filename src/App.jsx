@@ -28,7 +28,13 @@ function App() {
           {category && (
             <SelectedCategory currentCategory={category} updateArticle={setSelectedArticle} article={selectedArticle} />
           )}
-          <CategoryContainer updateArticle={setSelectedArticle} article={selectedArticle} currentCategory={category} />
+          {window.innerWidth >= 768 && (
+            <CategoryContainer
+              updateArticle={setSelectedArticle}
+              article={selectedArticle}
+              currentCategory={category}
+            />
+          )}
         </>
       )}
       {selectedArticle && (

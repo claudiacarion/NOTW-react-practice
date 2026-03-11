@@ -6,9 +6,16 @@ const NavMenu = ({ updateFunction, updateArticleFunction, currentCategory }) => 
   return (
     <div className={styles.navMenu}>
       <i className={`fa-solid fa-bars ${styles.hamburger}`}></i>
-      {categories.map((category, index) => (
-        <p className={styles.menuItem} key={index} onClick={() => (updateFunction(category), updateArticleFunction(currentCategory))}>{category}</p>
-      ))}
+      <div className={styles.menuWrapper}>
+        {categories.map((category, index) => (
+          <p
+            className={styles.menuItem}
+            key={index}
+            onClick={() => (updateFunction(category), updateArticleFunction(currentCategory))}>
+            {category}
+          </p>
+        ))}
+      </div>
     </div>
   );
 };

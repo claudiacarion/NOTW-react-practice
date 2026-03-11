@@ -1,7 +1,5 @@
 .header {
   align-items: center;
-  display: grid;
-  grid-template-columns: 1fr 5fr 1fr;
   margin: 24px;
   text-align: center;
 }
@@ -9,4 +7,16 @@
 .headerTitle {
   font-family: "UnifrakturMaguntia", cursive;
   font-size: 2rem;
+  margin-top: 32px;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+  }
+
+  .headerTitle {
+    margin-top: 0px;
+  }
 }

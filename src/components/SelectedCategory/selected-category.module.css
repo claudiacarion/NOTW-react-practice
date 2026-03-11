@@ -6,8 +6,7 @@
 }
 
 .selectedCategory {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  display: block;
 }
 
 .articleWrapper {
@@ -16,4 +15,11 @@
 
 .image {
   width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .selectedCategory {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
 }
